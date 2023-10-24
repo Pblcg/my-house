@@ -24,7 +24,7 @@ public class Picture
     {
         // nothing to do... instance variables are automatically set to null
     }
-
+   
     /**
      * Draw this picture.
      */
@@ -71,7 +71,45 @@ public class Picture
         moon.changeSize(30);
         moon.slowMoveVertical(-200);
     }
+     public void amanecer()
+    {
+        ground = new Square();
+        ground.changeColor("green");
+        ground.makeVisible();
+        ground.moveHorizontal(-500);
+        ground.moveVertical(140);
+        ground.changeSize(1000);
+        
+        wall = new Square();
+        wall.moveHorizontal(-140);
+        wall.moveVertical(20);
+        wall.changeSize(120);
+        wall.makeVisible();
+        
+        window = new Square();
+        window.changeColor("black");
+        window.moveHorizontal(-120);
+        window.moveVertical(40);
+        window.changeSize(40);
+        window.makeVisible();
 
+        roof = new Triangle();  
+        roof.changeSize(60, 180);
+        roof.moveHorizontal(20);
+        roof.moveVertical(-60);
+        roof.makeVisible();
+        
+        moon.makeVisible();
+        moon.slowMoveVertical(420);
+        
+        sun = new Circle();
+        sun.changeColor("yellow");
+        sun.moveHorizontal(100);
+        sun.moveVertical(230);
+        sun.changeSize(80);
+        sun.makeVisible();
+        sun.slowMoveVertical(-270);
+    }
     /**
      * Change this picture to black/white display
      */
