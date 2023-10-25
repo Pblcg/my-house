@@ -17,6 +17,7 @@ public class Picture
     private Circle sun;
     private Circle moon;
     private Square ground;
+    private Person person;
     /**
      * Constructor for objects of class Picture
      */
@@ -109,6 +110,18 @@ public class Picture
         sun.changeSize(80);
         sun.makeVisible();
         sun.slowMoveVertical(-270);
+        
+        person = new Person();
+        person.moveHorizontal(-300);
+        person.moveVertical(20);
+        person.makeVisible();
+        person.slowMoveHorizontal(170);
+        
+        person = new Person();
+        person.moveHorizontal(300);
+        person.moveVertical(20);
+        person.makeVisible();
+        person.slowMoveHorizontal(-270);
     }
     /**
      * Change this picture to black/white display
